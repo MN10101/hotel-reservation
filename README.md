@@ -35,30 +35,6 @@ The project consists of a backend written in Java using Spring Boot, which handl
 - `resources/templates`: Contains the Thymeleaf HTML templates used to render the web pages.
 - `resources/static`: Contains static resources such as CSS files.
 
-
-
-
-
-src
-├── main
-│   ├── java
-│   │   └── com
-│   │       └── example
-│   │           └── hotelreservation
-│   │               ├── controller
-│   │               │   └── HotelReservationController.java
-│   │               └── model
-│   │                   └── HotelReservation.java
-│   └── resources
-│       └── templates
-│           ├── reservationConfig.html
-│           └── reservationForm.html
-└── test
-    └── java
-        └── com
-            └── example
-                └── hotelreservation
-                    └── HotelReservationApplicationTests.java
 Running the Application
 To run the application, you can execute the main method in the HotelReservationApplication class. Alternatively, you can use the provided Maven or Gradle build tools to build and run the project.
 
