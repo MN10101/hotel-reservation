@@ -1,98 +1,44 @@
 # Hotel Reservation System
 
-This project is a simple Hotel Reservation System implemented using Spring Boot and Thymeleaf. It allows users to submit their reservation details through a form and processes the reservation.
+This is a simple hotel reservation system implemented using Spring Boot and Thymeleaf.
+
+## Overview
+
+The project consists of a backend written in Java using Spring Boot, which handles the business logic and data management. It includes a simple web interface for users to make hotel reservations.
+
+## Features
+
+- Allows users to enter their name, email, phone number, check-in and check-out dates, room type, and additional preferences such as smoking preference, breakfast inclusion, and late check-out.
+- Validates user input to ensure all required fields are filled and that the user agrees to the terms and conditions.
+- Provides feedback to the user in case of errors during the reservation process.
+- Displays a confirmation message upon successful reservation.
+
+## Getting Started
+
+1. Clone the repository to your local machine.
+2. Open the project in your favorite Java IDE.
+3. Build and run the project.
+4. Access the reservation form by navigating to `http://localhost:8080/form` in your web browser.
 
 ## Technologies Used
 
-- **Spring Boot**: For building the web application and handling HTTP requests.
-- **Thymeleaf**: As the template engine for server-side rendering of HTML pages.
-- **Java**: The programming language used for backend logic.
-- **HTML/CSS**: For frontend layout and styling.
+- Java
+- Spring Boot
+- Thymeleaf
+- HTML
+- CSS
 
-## Controller
+## Project Structure
 
-```java
-package com.example.hotelreservation.controller;
+- `com.example.hotelreservation.controller`: Contains the controller classes responsible for handling HTTP requests.
+- `com.example.hotelreservation.model`: Contains the model classes representing the data entities used in the application.
+- `resources/templates`: Contains the Thymeleaf HTML templates used to render the web pages.
+- `resources/static`: Contains static resources such as CSS files.
 
-import com.example.hotelreservation.model.HotelReservation;
-import jakarta.validation.Valid;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Arrays;
 
-@Controller
-public class HotelReservationController {
 
-    @GetMapping("/form")
-    public String reservationForm(Model model) {
-        model.addAttribute("reservation", new HotelReservation());
-        model.addAttribute("roomTypes", Arrays.asList("Single", "Double", "Suite"));
-        return "reservationForm";
-    }
 
-    @PostMapping("/process")
-    public String process(@Valid @ModelAttribute("reservation") HotelReservation reservation, Model model) {
-        // Processing reservation logic
-    }
-}
-Model
-java
-Copy code
-package com.example.hotelreservation.model;
-
-import java.time.LocalDate;
-
-public class HotelReservation {
-    // Model attributes
-}
-Views
-html
-Copy code
-<!-- reservationForm.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- HTML Head Section -->
-</head>
-<body>
-<div class="container">
-    <!-- Reservation Form Section -->
-</div>
-</body>
-</html>
-html
-Copy code
-<!-- reservationConfig.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- HTML Head Section -->
-</head>
-<body>
-<div class="container">
-    <!-- Reservation Confirmation Section -->
-</div>
-</body>
-</html>
-CSS Styling
-css
-Copy code
-body {
-    /* Body styling */
-}
-
-.container {
-    /* Container styling */
-}
-
-/* Additional CSS styles for form elements, error messages, and buttons */
-Project Structure
-css
-Copy code
 src
 ├── main
 │   ├── java
@@ -116,7 +62,8 @@ src
 Running the Application
 To run the application, you can execute the main method in the HotelReservationApplication class. Alternatively, you can use the provided Maven or Gradle build tools to build and run the project.
 
-Author
+## Author
+
 Mahmoud Najmeh
 
 License
